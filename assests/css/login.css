@@ -1,0 +1,14 @@
+.login_btns {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.forgot_password {
+    height:24px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #DB4444;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
