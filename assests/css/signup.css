@@ -56,6 +56,7 @@ justify-content: center;
     border: 1px solid transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 0.315);
     height: 40px;
+    padding: 10px;
 }
 .input_elements input::placeholder {
     font-family: "Poppins", sans-serif;
@@ -77,6 +78,7 @@ color: rgba(0, 0, 0, 0.301);
 }
 .google_sign_up_btn {
     width: 100%;
+    cursor: pointer;
 }
 .google_sign_up_btn  button{
     border: 1px solid rgba(0, 0, 0, 0.205);
@@ -90,6 +92,7 @@ color: rgba(0, 0, 0, 0.301);
     font-family: "Poppins", sans-serif;
  font-size: 16px;
  font-weight: 400;
+ cursor: pointer;
 
 } 
 

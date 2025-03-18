@@ -9,9 +9,24 @@ function loadComponent(elementId, filePath) {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header_placeholder", "components/header.html").then(() => {
+    const navbar = document.getElementById("navbar");
+    const dropdown = document.getElementById("dropdown");
+    const dropdown_container = document.getElementById("dropdown_container");
+
+    dropdown.addEventListener("click", () => {
+      console.log("i am working");
+      var currentOpacity = window.getComputedStyle(dropdown_container).opacity;
+      if (currentOpacity === "0") {
+        dropdown_container.style.opacity = "1";
+        dropdown_container.style.pointerEvents = "auto";
+      } else {
+        dropdown_container.style.opacity = "0";
+        dropdown_container.style.pointerEvents = "none";
+      }
+    });
+
     modifyHeader(); //modifyHeader runs after header
   });
-
   loadComponent("footer_placeholder", "components/footer.html");
 });
 
@@ -29,9 +44,3 @@ function modifyHeader() {
     }
   }
 }
-const dropdownIcon = document.getElementById("dropdown_icon");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-dropdownIcon.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
-});

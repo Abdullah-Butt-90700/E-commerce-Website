@@ -52,7 +52,11 @@
     .navbar_top_language_selector p {
     font-size: 14px;
     font-weight: 400;        text-decoration: none;
+    cursor: pointer;
     
+    }
+    .navbar_top_language_selector img {
+        cursor: pointer;
     }
     /* ------------------------------Navbar---------------------------------------------------------- */
     #placeholder_header {
@@ -98,15 +102,26 @@
         font-size: 16px;
         font-weight: 400;
         font-family: "Poppins", sans-serif;
+        cursor: pointer;
+      
+        
         
     
     
     }
+    .navbar_components ul li a:hover {
+  color: #DB4444;
+}
     .navbar_right_side {
     display: flex;
     gap: 30px;
     align-items: center;
+
+
     
+    }
+    .navbar_right_side img {
+        cursor: pointer;
     }
     .navbar_searchbar {
     display: flex; 
@@ -120,10 +135,10 @@
         border-right: #FAFAFA;
         background-color: #F5F5F5;
         border: 1px solid #F5F5F5;
-    }
-    .navbar_searchbar input::placeholder {
         padding-left: 20px;
+        padding-right: 40px;
     }
+   
     .navbar_searchbar_img {
     background-color: #F5F5F5;
         border: 1px solid #F5F5F5;
@@ -131,6 +146,7 @@
     
         align-content: center;
         position: relative;
+        cursor: pointer;
     
     }
     .navbar_searchbar_img img {
@@ -140,6 +156,63 @@
         top: 10px;
         
     }
+ 
+    #dropdown_container {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(42px);
+        width: 60%; 
+        border-radius: 4px;
+        align-items: center;
+        right: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.2s;
+
+
+
+    }
+   
+
+    .dropdown_elements {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .dropdown_element {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .dropdown_element a {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+
+    }
+    .navbar_right_side_three_images {
+        border-radius: 50%;
+    }
+  
+
+    .navbar_right_side_three_images:hover {
+        border-radius: 50%;
+        transition: 0.5s;
+
+        background-color: #DB4444;
+    }
+.navbar_right_side_three_images img:hover {
+    filter: invert(1);
+    transition: 0.5s;
+
+
+}
+
     /* ----------------------------Main_Page---------------------------------------------------------------------------- */
     #main {
         height: 100%;
@@ -152,7 +225,7 @@
     }
     .shopping_opt {
         display: flex;
-        width: 20%;
+        width: 25%;
         align-items: center;
         
     
@@ -165,12 +238,14 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
     
     }
     .shopping_opt_container p {
         font-family: "Poppins", sans-serif; 
         font-size: 16px;
         font-weight: 400;
+        cursor: pointer;
     
     
     } 
@@ -196,14 +271,40 @@
     width: 100%;
     
     }
+    .iphone_circles_container {
+        display: flex;
+        height: 100%;
+        gap: 10px;
+
+    color: white;   
+
+}
+.iphone_circles_container div {
+    background-color: grey;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.iphone_circles_container div:hover {
+    transition: 0.5s;
+
+    background-color: red;
+    border: 2px solid white;
+
+}
     .iphone14_adv_wrapper{
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         max-width: 1120px;
         margin: 0 auto;
         align-items: center;
         gap: 20px;
         padding: 20px 20px;
+    }
+    .iphone14_top_side_container {
+        display: flex;
     }
     .iphone14_adv_left_side{
         display: flex;
@@ -294,6 +395,7 @@
     .flash_sales_container {
       display:grid;
       grid-template-columns: 0.5fr 1fr 0.1fr;
+      align-items: center;
     }
     
     .time {
@@ -331,6 +433,8 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+         
+         
     }
     .arrow_circle{
     border: 1px solid #F5F5F5;
@@ -341,6 +445,7 @@
     justify-content: center;
     align-items: center;
     width: 40px;
+    cursor: pointer;
     }
     .arrow_circle img {
         width: 50%;
@@ -370,20 +475,56 @@
     
     
     }
+   
+    .add-to-cart h1 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .add-to-cart {
+        position: absolute;
+        display: flex
+    ;
+        justify-content: center;
+        height: 41px;
+        bottom: 0;
+        align-items: center;
+        background-color: black;
+        color: white;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        opacity: 0;
+
+    }
     
     .slide_container {
         position: relative;
-        min-width: 270px;
-        height: 250px;    padding: 20px;
+        min-width: 260px;
+        height: 250px;    
         gap: 30px;
         background-color: #F5F5F5;
+        border-radius: 4px;
     
+    }
+    .slide_container:hover {
+        .add-to-cart {
+            opacity: 1;
+        transition: 0.5s;
+        cursor: pointer;
+        }
     }
     .disc_obj {
      position: absolute;
      top: 0;
      left: 0;
     
+    }
+    .discount_obj {
+        padding: 20px;
+        position: absolute;
+
+
     }
     .discount_obj p {
         background-color: #DB4444;
@@ -402,7 +543,12 @@
         position: absolute;
         right: 15px;
         top: 15px;
+        display: flex
+    ;
+        flex-direction: column;
+        gap: 10px;
     }
+    
     .like_obj_img {
         background-color: white;
         height: 34px;
@@ -411,7 +557,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         
+    }
+   
+    .like_obj_img:hover {
+        filter: invert(1
+        );
+        transition: 0.5s;
+        cursor: pointer;
+
     }
     .obj_img{
         display: flex;
@@ -485,11 +640,15 @@
         width: 170px;
         align-content: center;
         justify-content: center;
-        border: 1px solid rgba(128, 128, 128, 0.445);;
+        border: 1px solid rgba(128, 128, 128, 0.445);
+        transition: transform 3s;
+        border-radius: 4px;
         
         }
         .category_opt:hover {
             background-color: #DB4444;
+            transform: translateY(10px);
+
             
         }
         .category_opt:hover .category_img img {
@@ -560,15 +719,23 @@
         display: flex;
         height: 500px;
         justify-content: space-between;
-        background-color: black;
         align-items: center;
         padding: 0px 30px;
+
     }
+
     .speaker_adv_left_side{
         
         display: flex;
         flex-direction: column;
         gap: 30px;
+        padding-left: 10px;
+    }
+    .speaker_adv_left_side_container {
+        background-color: black;
+        height: 100%;
+        align-content: center;
+        padding-left: 30px;
     }
     .speaker_adv_category {
     color: #00FF66;
@@ -588,7 +755,7 @@
     }
     .speaker_adv_time_container{
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     font-family: "Poppins", sans-serif;
     
@@ -613,12 +780,16 @@
     }
     .speaker_adv_btn button {
     height: 56px;
-    width: 171px;
+    cursor: pointer;
+
+    width: 40%;
     border:1px solid #00FF66;
     border-radius: 4px;
     background-color: #00FF66;
     color: white;
     font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
     font-weight: 500;
     }
     .speaker_adv_img_container {
@@ -631,14 +802,15 @@
     }
     /* ---------------------our_products---------------------------------------------------------------------- */
     #our_products {
-        height: 100vh;
+        height: 120vh;
     align-content: center;
     }
     .products_slide_container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 40px;
+        display: grid
+        ;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 40px;
         
     }
     .products_container {
@@ -648,12 +820,50 @@
     }
     .obj_price_ratings {
         display: flex;
-        align-items: center;
+        flex-direction: column;
     
+    }
+    .our_products_btn {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .price_reviews_stars {
+        display: flex;
+    }
+    .style_change_colors {
+        display: flex;
+        gap: 10px;
+    }
+    .yellow_color {
+        background-color: yellow;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 2px solid black;
+
+    }
+    .yellow_color:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 0, 0.301);
+    }
+    .red_color {
+        background-color: red;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 2px solid black;
+
+
+    }
+    .red_color:hover {
+        cursor: pointer;
+        background-color: rgba(255, 0, 0, 0.432);
     }
     /* ------------- new arrival--------------------------------------------------------------------------------- */
     #featured {
-        min-height: 100vh;
+        min-height: 85vh;
         align-content: center;
     }
     .featured_container {
@@ -672,17 +882,18 @@
         grid-row: span 2;
         background-color: black;
         height: 600px;
-        width: 570px;
         position: relative;
         overflow: hidden;
         display: flex;
-        align-items: flex-end;}
+        align-items: flex-end;
+    border-radius: 4px;}
     .small_banner {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
         grid-template-rows: auto auto;
         row-gap: 30px;
+        column-gap: 30px;
     }
     .women  {
         
@@ -709,7 +920,7 @@
     padding: 30px;
     justify-content: flex-end;
     height: 100%;
-    width: 70%;
+    width: 56%;
     gap: 20px;
     }
     .arrival_categories h1 {
@@ -730,6 +941,7 @@
      font-weight: 500;
      display: flex;
      flex-direction: column;
+     cursor: pointer;
     }
     .arrival_categories h6 div {
         height: 1px;
@@ -743,6 +955,7 @@
         background-color: #0D0D0D;
         position: relative;
         color: white;
+        border-radius: 4px;
     }
     .women_container {
         background-image: url("/assests/images/attractive-woman-wearing-hat-posing-black-background\ 1.png");
@@ -779,6 +992,7 @@
         width: 270px;
         height: 284px;
         position: relative;
+        border-radius: 4px;
     
     color: white;       
     background: radial-gradient(circle, rgba(50, 50, 50, 1) 40%, black 120%);
@@ -874,31 +1088,29 @@
     font-size: 20px;
     font-weight: 500;
     }
-    .footer_btn {
+    .email_input {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        position: relative;
+        
+    }
+    .email_input input {
+        height: 48px;
         display: flex;
         align-items: center;
-        
-        
+        padding:0px 40px 0px 20px;
+        background-color: black;
+        color: white;
+
     }
-    .footer_btn button {
-        height: 48px;
-        width: 217px;
-        background-color: transparent;
-        border: 2px solid white;
-        border-radius: 4px;
-        font-family: "Poppins", sans-serif;
-    
-        color: #fafafa77;
-        font-size: 16px;
-        font-weight: 400;
-        display: flex;align-items: center;
-        justify-content: space-between;
-        padding: 0px 20px;
-        
+    .email_input img {
+     position: absolute;
+     right: 13px;
+     top: 13px;
+     cursor: pointer;
     }
-    .footer_btn_img {
-    display: flex;
-    }
+   
     .download_app{
         display: flex;
         gap: 10px;
@@ -907,6 +1119,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        cursor: pointer;
     }
     .footer_bottom {
         height: 70px;
@@ -933,4 +1146,7 @@
     .different_platforms{
         display: flex;
     gap: 20px;
+     }
+     .different_platforms div {
+        cursor: pointer;
      }

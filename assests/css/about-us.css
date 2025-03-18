@@ -9,10 +9,18 @@
     align-content: center;
 }
 .hero_home_about {
+    display: flex;
+    gap: 10px;
 padding-bottom: 20px;
 font-family: "Poppins", sans-serif;
 font-weight: 400;
 font-size: 14px;
+height: 10vh;
+
+}
+.hero_home_about a {
+text-decoration: none;
+color: black;
 }
 .story {
     display: flex;
